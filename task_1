@@ -1,0 +1,5 @@
+N = int(input('Здравсвуйте, введите число? '))
+number = 1
+while number <= N:
+    print(number ** 3)
+    number += 1
