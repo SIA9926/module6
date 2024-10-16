@@ -1,1 +1,14 @@
-
+print('Добро пожаловать в игру "Угадай число"')
+password = 10
+attempts = 0
+while True:
+    number = int(input('Введите число: '))
+    attempts += 1
+    if number > password:
+        print('Число больше, чем нужно. Попробуйте ещё раз!')
+    elif number < password:
+        print('Число меньше, чем нужно. Попробуйте ещё раз!')
+    else:
+        number == password
+        print('Вы угадали! Число попыток: ', attempts)
+        break
