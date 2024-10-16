@@ -1,1 +1,24 @@
-
+print('Добро пожаловать в игру "Угадай число"')
+print('Загадайте число от 1 до 100')
+print('Напишите "1", когда будете готовы')
+answer_1 = int(input('Ваш ответ: '))
+first = 1
+last = 100
+attempts = 0
+while first <= last:
+    attempts += 1
+    guess = (first + last) // 2
+    print('Ваше число равно, больше или меньше ', guess)
+    print('Введите 1, если равно')
+    print('Введите 2, если больше')
+    print('Введите 3, если меньше')
+    answer_2 = int(input('Ваш ответ: '))
+    if answer_2 == 1:
+        print('Ура! Я угадал ваше число', guess,' за ', attempts, ' попыток.')
+        break
+    elif answer_2 == 2:
+        first = guess + 1
+    elif answer_2 == 3:
+        last = guess - 1
+    else:
+        print("Неверный ввод. Пожалуйста, введите 1, 2 или 3.")
