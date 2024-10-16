@@ -1,1 +1,14 @@
-
+hour = 1
+summ = 0
+phone_call = False
+while hour <= 8:
+    print(hour, '-й час')
+    task = int(input('Сколько задач решил Максим? '))
+    wife = int(input('Звонит жена. Взять трубку? (1 — да, 0 — нет): '))
+    if wife == 1:
+        phone_call = True
+    hour += 1
+    summ += int(task)
+print('Рабочий день закончился. Всего выполнено задач:', summ)
+if phone_call:
+    print('Нужно зайти в магазин.')
