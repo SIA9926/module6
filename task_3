@@ -1,1 +1,11 @@
-
+number = int(input('Введите число: '))
+if number < 0:
+    number = -number
+if number == 0:
+    count = 1
+else:
+    count = 0
+    while number > 0:
+        number //= 10
+        count += 1
+print('Колличество цифр в числе равняется: ', count)
